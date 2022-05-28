@@ -1,33 +1,28 @@
 # coding: utf-8
+# csv and Path imports
 import csv
 from pathlib import Path
 
-"""Part 1: Automate the Calculations.
-
-Automate the calculations for the loan portfolio summaries.
-
-First, let's start with some calculations on a list of prices for 5 loans.
-    1. Use the `len` function to calculate the total number of loans in the list.
-    2. Use the `sum` function to calculate the total of all loans in the list.
-    3. Using the sum of all loans and the total number of loans, calculate the average loan price.
-    4. Print all calculations with descriptive messages.
-"""
+# Part 1: Automate the Calculations
+# Loan list referenced in work moving forward
 loan_costs = [500, 600, 200, 1000, 450]
 
-# How many loans are in the list?
-# @TODO: Use the `len` function to calculate the total number of loans in the list.
-# Print the number of loans from the list
-# YOUR CODE HERE!
+# Number of loans in the list
+loan_costs_length = len(loan_costs)
 
-# What is the total of all loans?
-# @TODO: Use the `sum` function to calculate the total of all loans in the list.
-# Print the total value of the loans
-# YOUR CODE HERE!
+print(f"There are {loan_costs_length} loans total")
 
-# What is the average loan amount from the list?
-# @TODO: Using the sum of all loans and the total number of loans, calculate the average loan price.
-# Print the average loan amount
-# YOUR CODE HERE!
+# Sum of the loans in the list
+loan_costs_total = sum(loan_costs)
+
+print(f"The sum of all the loans is ${loan_costs_total:.2f}")
+
+# Average loan amount based on the list
+average_loan_costs = loan_costs_total / loan_costs_length
+
+print(f"The average loan amount is ${average_loan_costs:.2f}")
+
+
 
 """Part 2: Analyze Loan Data.
 
