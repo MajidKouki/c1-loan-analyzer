@@ -113,33 +113,23 @@ inexpensive_loans = []
 # Loop and append anything less than or equal 500 to inexpensive_loans
 for loan in loans:
     if loan["loan_price"] <= 500:
-        inexpensive_loans.append(loan["loan_price"])
+        inexpensive_loans.append(loan)
 
 # Print results
 print(f"{inexpensive_loans} are all the loans costing $500 or less.")
 
 
 
-"""Part 5: Save the results.
-
-Output this list of inexpensive loans to a csv file
-    1. Use `with open` to open a new CSV file.
-        a. Create a `csvwriter` using the `csv` library.
-        b. Use the new csvwriter to write the header variable as the first row.
-        c. Use a for loop to iterate through each loan in `inexpensive_loans`.
-            i. Use the csvwriter to write the `loan.values()` to a row in the CSV file.
-
-    Hint: Refer to the official documentation for the csv library.
-    https://docs.python.org/3/library/csv.html#writer-objects
-
-"""
-
+# Part 5: Save the results
 # Set the output header
 header = ["loan_price", "remaining_months", "repayment_interval", "future_value"]
 
 # Set the output file path
 output_path = Path("inexpensive_loans.csv")
 
-# @TODO: Use the csv library and `csv.writer` to write the header row
-# and each row of `loan.values()` from the `inexpensive_loans` list.
-# YOUR CODE HERE!
+# Open file and create writer to write headers and contents of inexpenive_loans
+with open("inexpensive_loans.csv", "w", newline="") as inexpensive_loans_csv:
+    writer = csv.writer(inexpensive_loans_csv)
+    writer.writerow(header)
+    for row in inexpensive_loans:
+        writer.writerow(loan.values())
