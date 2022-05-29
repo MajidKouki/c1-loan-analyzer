@@ -11,16 +11,16 @@ loan_costs_length = len(loan_costs)
 
 print(f"There are {loan_costs_length} loans total")
 
-# Sum of the loans in the list
+# Sum of the loan costs in the list
 loan_costs_total = sum(loan_costs)
 
-print(f"The sum of all the loans is ${loan_costs_total:.2f}.")
+print(f"The sum of all the loan prices is ${loan_costs_total:.2f}.")
 
 # Average loan amount based on the list
 average_loan_costs = loan_costs_total / loan_costs_length
 
-print(f"The average loan amount is ${average_loan_costs:.2f}.")
-
+print(f"The average loan price is ${average_loan_costs:.2f}.")
+print()
 
 
 # Part 2: Analyze Loan Data
@@ -54,7 +54,7 @@ if present_value_1 >= loan_cost:
     print("The loan is worth at least the cost to buy it.")
 else:
     print("The loan is too expenive and not worth the price.")
-
+print()
 
 
 # Part 3: Perform Financial Calculations
@@ -76,6 +76,7 @@ annual_discount_rate = 0.20
 present_value = present_value_calculator(new_loan["future_value"], new_loan["remaining_months"], annual_discount_rate)
 
 print(f"The present value of the loan is ${present_value:.2f}.")
+print()
 
 
 
@@ -113,7 +114,7 @@ inexpensive_loans = []
 # Loop and append anything less than or equal 500 to inexpensive_loans
 for loan in loans:
     if loan["loan_price"] <= 500:
-        inexpensive_loans.append(loan)
+        inexpensive_loans.append(loan["loan_price"])
 
 # Print results
 print(f"{inexpensive_loans} are all the loans costing $500 or less.")
