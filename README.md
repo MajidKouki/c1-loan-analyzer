@@ -1,12 +1,38 @@
-# c1-loan-analyzer
-This loan analyzer is composed of 5 parts described below
-### Part 1: Automating calculations
-Intakes loan costs and calculates the total number of loans, sum of loan costs, and the average cost per loan.
-### Part 2: Analyze loan data
-Intakes detailed loan data and calculates the present value to determine is its a good buy or not.
-### Part 3: Financial calculations
-Intakes detailed loan data and uses a function to calculate the present value.
-### Part 4: Conditional filtering
-Filters through a list of loans and adds any costing $500 or less to a new inexpenive loan list.
-### Part 5: Saving results
-Writes the inexpensive loan data to a new csv file.
+# Loan Analyzer
+
+This project intakes loan costs and other loan data to help calculate the number of loans, sum of their costs and the average cost for each loan. Afterwards, it calculates the present value and assists in identifying whether or not it would be a profitable. Finally, the program filters through the loans to identify affordable options and writes them to a new csv file.
+
+---
+
+## Technologies
+
+This program utilizes Python as well as the csv and pathlib dependencies.
+
+---
+
+## Installation Guide
+
+Before running the program, the following dependencies are required:
+
+```python
+import csv
+import pathlib as Path
+```
+
+---
+
+## Usage
+
+This program is ready to run as-is and allows the user to change variables as needed to better suit their needs.
+
+---
+
+## Contributors
+
+Brought to you by Majid Kouki
+
+---
+
+## License
+
+MIT
