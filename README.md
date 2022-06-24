@@ -29,7 +29,7 @@ This program is ready to run as-is and allows the user to change variables as ne
 
 ## Contributors
 
-Brought to you by Majid Kouki
+Brought to you by Majid Kouki. You can reach me at [majidkpy@gmail.com](mailto:majidkpy@gmail.com).
 
 ---
 
